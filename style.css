@@ -5,10 +5,9 @@
 }
 
 body{
-    margin-top: 20px;
-    margin-left: 20px;
     font-family: "Inter", sans-serif;
 }
+
 .btn{
     display: inline-block;
 }
@@ -58,7 +57,6 @@ a{
     text-decoration: none;
 }
 
-
 .btne{
     font-family: "Inter", sans-serif;
     display: inline-block;
@@ -106,21 +104,21 @@ a{
     border: dashed 2px black;
 }
 
-
 .card{
     width: 30%;
     padding: 8px;
-    /*background-color: blue;*/
+    /*background-color: grey;*/
     border-radius: 16px;
     font-family: "Inter", sans-serif;
     /*box-shadow: 1px 2px 1px 5px rgb(51, 209, 109);*/
+    cursor: pointer;
 }
 
 .width-30 {
     width: 30%;
 }
 
-.img-width {
+.w-100 {
     width: 100%;
 }
 
@@ -130,11 +128,6 @@ a{
 
 .mt-16{
     margin-top: 16px;
-}
-
-.img-height {
-    width: 50%;
-    height: 50%;
 }
 
 .margin-top-50 {
@@ -147,6 +140,10 @@ a{
 
 .bg-grey {
     background-color: lightgray;
+}
+
+.margin-left-20 {
+    margin-left: 20px;
 }
 
 .margin-left-50 {
@@ -162,6 +159,12 @@ a{
     justify-content: space-around;
 }
 
+/*
 h3,p {
     color: black;
+}
+*/
+
+.box-shadow-green {
+    box-shadow: 1px 2px 1px 5px rgb(51, 209, 109);
 }
