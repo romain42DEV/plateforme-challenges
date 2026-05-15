@@ -1,3 +1,4 @@
+/*
 // affiche les div qui ont la classe card
 let boites = document.querySelectorAll(".card")
 console.log(boites);
@@ -10,9 +11,39 @@ boites.forEach(card=> {
     card.classList.toggle("box-shadow-green")
   })
 })
+*/
+
+const cards = document.querySelectorAll(".card");
+const cartCount = document.getElementById("cart-count");
+
+let cart = 0;
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    // Si déjà sélectionné → retire du panier
+    if (card.classList.contains("box-shadow-green")) {
+      card.classList.remove("box-shadow-green");
+      cart--;
+    // Sinon → ajoute au panier
+    } else {
+      card.classList.add("box-shadow-green");
+      cart++;
+    }
+
+    cartCount.textContent = cart;
+  });
+});
 
 
 
+
+
+
+
+
+
+/*
 let nombreClics = 0;
 
 function comptage(id) {
@@ -29,3 +60,4 @@ function comptage(id) {
 document.getElementById("boxshadowgreen").addEventListener("click", comptage);
 document.getElementById("boxshadowgren").addEventListener("click", comptage);
 document.getElementById("boxshadowgreene").addEventListener("click", comptage);
+*/
