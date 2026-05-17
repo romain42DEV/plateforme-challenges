@@ -41,7 +41,7 @@ document.getElementById("reset").addEventListener("click", () => {
 let chrono = document.querySelector("#chrono")
 
 // On récupère le bouton "start"
-let stratBtn = document.querySelector("#start")
+let startBtn = document.querySelector("#start")
 
 // On récupère le bouton "stop"
 let stopBtn = document.querySelector("#stop")
@@ -281,7 +281,7 @@ function reset(){
 
 
 // Lance le chrono au clic sur le bouton start
-stratBtn.addEventListener("click", demarrer);
+startBtn.addEventListener("click", demarrer);
 
 // Arrête le chrono au clic sur le bouton stop
 stopBtn.addEventListener("click", arretter);
@@ -293,10 +293,10 @@ restetBtn.addEventListener("click", reset);
 
 document.addEventListener("keydown", function (event) {
     // Vérifie si on appuie sur Entrée
-    if (event.code === "Space") {
+    if (event.key === "Enter") {
         demarrer();
     }
-    if (event.key === "Enter") {
+    if (event.code === "Space") {
         arretter();
     }
 });
