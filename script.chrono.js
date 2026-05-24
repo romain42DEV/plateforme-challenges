@@ -291,12 +291,48 @@ restetBtn.addEventListener("click", reset);
 
 
 
-document.addEventListener("keydown", function (event) {
-    // Vérifie si on appuie sur Entrée
-    if (event.key === "Enter") {
+document.addEventListener("keyup", function (event) {
+    // Vérifie si on press Space
+    if (event.code === "Space") {
         demarrer();
     }
-    if (event.code === "Space") {
+});
+
+
+document.addEventListener("keydown", function (event) {
+    // Vérifie si on appuie sur Space
+    if (event.key === "Enter") {
         arretter();
+        document.querySelector(".hero-result").innerHTML =
+        ` <span>bonjour</span> on a besoin de toi !`;
+    }
+});
+
+
+
+/*
+document.body.onkeydown = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||      
+      e.keyCode == 32      
+  ) {
+    document.querySelector(".hero-result").innerHTML =
+        ` <span>bonjour</span> on a besoin de toi !`;
+  }
+}
+*/
+
+let single = document.querySelector(".single");
+let todoList = document.querySelector(".todo-list");
+
+document.addEventListener("keydown", function (event) {
+
+    // Vérifie si on appuie sur Entrée
+    if (event.key === "Enter") {
+
+        // Récupère le texte du champ input
+        let taskText = single.value;
+
+        todoList.innerHTML += `<li><input type="checkbox" class="chekbox"> ${taskText}</li>`
     }
 });
