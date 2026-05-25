@@ -62,6 +62,9 @@ let minutes = 0;
 // Variable pour stocker les secondes
 let secondes = 0;
 
+let running = false;
+
+
 
 
 // VARIABLE POUR LE setTimeout
@@ -290,7 +293,7 @@ stopBtn.addEventListener("click", arretter);
 resetBtn.addEventListener("click", reset);
 
 
-
+/*
 document.addEventListener("keyup", function (event) {
     // Vérifie si on press Enter
     if (event.key === "Enter") {
@@ -299,7 +302,7 @@ document.addEventListener("keyup", function (event) {
 });
 
 
-/*
+
 document.addEventListener("keydown", function (event) {
     // Vérifie si on appuie sur Space
     if (event.code === "Space") {
@@ -319,7 +322,7 @@ document.body.onkeydown = function(e) {
         ` <span>bonjour</span> on a besoin de toi !`;
   }
 }
-*/
+
 
 const single = document.querySelector(".single");
 const todoList = document.querySelector(".todo-list");
@@ -336,3 +339,19 @@ document.addEventListener("keydown", function (event) {
         todoList.innerHTML += `<li>${taskText}</li>`
     }
 });
+*/
+
+
+
+
+// Contrôle avec la barre espace
+    document.addEventListener("keyup", function(event) {
+      if (event.code === "Space") {
+
+        if (!running) {
+          demarrer();
+        } else {
+          arretter();
+        }
+      }
+    });
