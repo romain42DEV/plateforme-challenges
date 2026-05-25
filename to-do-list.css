@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2E9;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+
+.title-todo {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: #1b1a1a;
+    margin-bottom: 50px;
+}
+
+/* input */
+
+.input-text {
+    width: 40%;
+    padding: 18px 22px;
+    border: solid 3px #1b1a1a;
+    border-right: solid 6px #1b1a1a;
+    border-bottom: solid 9px #1b1a1a;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: #1b1a1a;
+    font-size: 14px;
+    margin: auto;
+    display: block;
+}
+
+.todo-list {
+    list-style: none;
+    width: 40%;
+    margin: auto;
+    color: var #1b1a1a;
+    margin-top: 80px;
+    font-size: 25px;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 18px;
+    padding: 16px;
+    background-color: #ffffff;
+    border: solid 3px #1b1a1a;
+    border-right: solid 6px #1b1a1a;
+    border-bottom: solid 9px #1b1a1a;
+    border-radius: 16px;
+}
+
+.chekbox {
+    width: 20px;
+    height: 20px;
+}

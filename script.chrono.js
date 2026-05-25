@@ -47,7 +47,7 @@ let startBtn = document.querySelector("#start")
 let stopBtn = document.querySelector("#stop")
 
 // On récupère le bouton "reset"
-let restetBtn = document.querySelector("#reset")
+let resetBtn = document.querySelector("#reset")
 
 
 
@@ -287,21 +287,22 @@ startBtn.addEventListener("click", demarrer);
 stopBtn.addEventListener("click", arretter);
 
 // Remet le chrono à zéro au clic sur le bouton reset
-restetBtn.addEventListener("click", reset);
+resetBtn.addEventListener("click", reset);
 
 
 
 document.addEventListener("keyup", function (event) {
-    // Vérifie si on press Space
-    if (event.code === "Space") {
+    // Vérifie si on press Enter
+    if (event.key === "Enter") {
         demarrer();
     }
 });
 
 
+/*
 document.addEventListener("keydown", function (event) {
     // Vérifie si on appuie sur Space
-    if (event.key === "Enter") {
+    if (event.code === "Space") {
         arretter();
         document.querySelector(".hero-result").innerHTML =
         ` <span>bonjour</span> on a besoin de toi !`;
@@ -309,8 +310,6 @@ document.addEventListener("keydown", function (event) {
 });
 
 
-
-/*
 document.body.onkeydown = function(e) {
   if (e.key == " " ||
       e.code == "Space" ||      
@@ -322,17 +321,18 @@ document.body.onkeydown = function(e) {
 }
 */
 
-let single = document.querySelector(".single");
-let todoList = document.querySelector(".todo-list");
+const single = document.querySelector(".single");
+const todoList = document.querySelector(".todo-list");
 
 document.addEventListener("keydown", function (event) {
 
     // Vérifie si on appuie sur Entrée
-    if (event.key === "Enter") {
+    if (event.code === "Space") {
+        arretter();
 
         // Récupère le texte du champ input
         let taskText = single.value;
 
-        todoList.innerHTML += `<li><input type="checkbox" class="chekbox"> ${taskText}</li>`
+        todoList.innerHTML += `<li>${taskText}</li>`
     }
 });
