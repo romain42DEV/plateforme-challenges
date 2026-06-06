@@ -347,11 +347,9 @@ document.addEventListener("keydown", function (event) {
 // Contrôle avec la barre espace
     document.addEventListener("keyup", function(event) {
       if (event.code === "Space") {
-
-        if (!running) {
-          demarrer();
-        } else {
-          arretter();
-        }
+        demarrer();
+      }
+      else{
+        arretter();
       }
     });
